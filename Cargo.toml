@@ -1,0 +1,10 @@
+[package]
+name = "sigmaos_boot_manager"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+
+[lib]
+name = "sigmaos_boot_manager"
+path = "src/lib.rs"
