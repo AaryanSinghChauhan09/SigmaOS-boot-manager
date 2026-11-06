@@ -5,6 +5,8 @@
 //! kernel command line. Validation is fail-fast — an entry without a kernel
 //! or a `root=` parameter can't boot and is rejected.
 
+pub mod esp;
+
 use std::fmt;
 
 /// Errors validating a boot entry.
