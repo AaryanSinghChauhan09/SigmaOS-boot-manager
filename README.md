@@ -1,9 +1,9 @@
 # SigmaOS-boot-manager
 
-Boot manager component for SigmaOS
+Boot Manager for SigmaOS inspired by SigmaOS Linux
 
-- **Category:** System Services
-- **Engine:** sysadmin
+- **Category:** Utilities
+- **Engine:** boot_manager
 - **Language:** Rust
 
 ## Build & Test

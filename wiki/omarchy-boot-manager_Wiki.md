@@ -1,7 +1,7 @@
 # SigmaOS-SigmaOS-boot-manager Component Wiki
 
 ## Overview
-SigmaOS-SigmaOS-boot-manager provides Boot manager component for SigmaOS for the SigmaOS operating system. It demonstrates the subsystem and integration within the SigmaOS ecosystem, following the principles of clear abstraction and deterministic initialization.
+SigmaOS-SigmaOS-boot-manager provides Boot entry and bootloader manager for the SigmaOS operating system. It demonstrates the subsystem and integration within the SigmaOS ecosystem, following the principles of clear abstraction and deterministic initialization.
 
 ## Principles
 - Single Responsibility
@@ -20,10 +20,10 @@ SigmaOS-SigmaOS-boot-manager follows a SigmaOS-boot-manager pattern:
 
 ## API
 The component provides the following public APIs:
-- `core::manage(SigmaOS-boot-manager)` - Manage a SigmaOS-boot-manager by given configuration
-- `core::register(SigmaOS-boot-manager)` - Register a SigmaOS-boot-manager by given name
-- `core::status::SigmaOS-boot-manager()` - Get SigmaOS-boot-manager status and SigmaOS-boot-manager availability
-- `core::track::SigmaOS-boot-manager()` - Track SigmaOS-boot-manager management and SigmaOS-boot-manager tracking
+-  - Manage a SigmaOS-boot-manager by given configuration
+-  - Register a SigmaOS-boot-manager by given name
+-  - Get SigmaOS-boot-manager status and SigmaOS-boot-manager availability
+-  - Track SigmaOS-boot-manager management and SigmaOS-boot-manager tracking
 - Error types for SigmaOS-boot-manager failure scenarios or unsupported SigmaOS-boot-manager types
 
 ## Test Structure (Arrange-Act-ASSERT)
@@ -33,24 +33,10 @@ All tests follow the AAA pattern:
 3. **Assert**: Verify the expected SigmaOS-boot-manager results
 
 Example:
-```rust
-#[test]
-fn test_SigmaOS-boot-manager_aaa() {
-    // Arrange
-    let SigmaOS-boot-manager = SigmaOS-boot-manager::new("my-SigmaOS-boot-manager");
-    
-    // Act
-    let result = core::manage(SigmaOS-boot-manager);
-    
-    // Assert
-    assert!(result.is_ok());
-    let managed = result.unwrap();
-    assert!(managed.is_managed());
-}
-```
+
 
 ## Development
-- Follows Rust best practices with `#![forbid(unsafe_code)]`
+- Follows Rust best practices with 
 - SigmaOS-boot-manager initialization is best-effort; gracefully degrades on unsupported configurations
 - Comprehensive error types for all SigmaOS-boot-manager failure scenarios
 - Unit tests provided for SigmaOS-boot-manager management and configuration
